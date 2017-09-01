@@ -15,7 +15,8 @@
 
 % Table setup
 \usepackage{tabularx,tabulary}
-\newcolumntype{Y}{>{\arraybackslash}X}
+\newcolumntype{Y}{>{\arraybackslash}X} % subheader column
+\newcolumntype{s}{>{\hsize=2\hsize}r} % section column
 
 % Color definitions
 \usepackage[usenames, dvipsnames]{xcolor} 
@@ -52,16 +53,12 @@
 
 %% font specifications
 %%% site
-\newcommand{\site}[1]{
+\newcommand{\site}[3]{
     \fontsize{8pt}{10pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont #1
-}
-
-%%% link
-\newcommand{\link}[2]{
     \fontsize{12pt}{15pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
-    \href{#2}{#1}
+    \href{#3}{#2}
 }
 
 %%% section header
@@ -73,13 +70,13 @@
 %%% section subheader
 \newcommand{\secsub}[1]{
     \fontsize{10pt}{12pt}
-    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Bold}\selectfont #1
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont #1
 }
 
 %%% content
-\newcommand{\content}[1]{
+\newcommand{\content}{
     \fontsize{10pt}{12pt}
-    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Regular}\selectfont #1
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
 }
 
 % Environments
@@ -87,9 +84,19 @@
 \newenvironment{subheader}[1]{
      \table[h]\centering
      \tabularx{\textwidth}{*{#1}{Y}}
-     \hline\\[-2.5ex]
+     \hline\\[-1.5ex]
 }{
      \endtabularx\\
-     \hrulefill
+     \hrulefill\\[-4.5ex]
      \endtable
+}
+
+%% topic
+\newenvironment{topic}[1]{
+    \table[h]\centering
+    \tabularx{\textwidth}{Xs}
+    \sechead{#1} & \content
+}{
+    \endtabularx\\
+    \endtable
 }
