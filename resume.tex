@@ -21,15 +21,19 @@
 % HEADER
 %%%%%%%%%
 
-\makeheader{Name Lastname}{55pt}{60pt}
+% \makeheader{title/name}
+\makeheader{Name Lastname}
 
 %%%%%%%%%%%%
 % SUBHEADER
 %%%%%%%%%%%%
 
+% argument to environment should match number of sites
 \begin{subheader}{3}
-SITE & SITE & SITE \\
-link & link & link \\
+    % specify sites
+    \site{SITE} & \site{SITE} & \site{SITE} \\
+    % specify links (use hyperref's \href for hyperlinking)
+    \link{link}{url} & \link{link}{url} & \link{link}{url} \\
 \end{subheader}
 
 \end{document}

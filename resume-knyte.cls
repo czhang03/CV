@@ -10,12 +10,12 @@
 
 % Misc. package Imports
 \usepackage[hmargin=1.00cm, vmargin=0.75cm]{geometry}
-\usepackage[hidelinks]{hyperref}
 \usepackage{verbatim} % to enable multiline comments
+\usepackage{hyperref}
 
 % Table setup
 \usepackage{tabularx,tabulary}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{Y}{>{\arraybackslash}X}
 
 % Color definitions
 \usepackage[usenames, dvipsnames]{xcolor} 
@@ -42,12 +42,44 @@
 
 % Commands
 %% makeheader
-\newcommand{\makeheader}[3]{
+\newcommand{\makeheader}[1]{
 	\centering{
 		\color{primary}
-		\fontsize{#2}{#3}
+		\fontsize{42pt}{52pt}
 		\fontspec[Path=resources/fonts/Muli/]{Muli-Bold}\selectfont #1
 	}
+}
+
+%% font specifications
+%%% site
+\newcommand{\site}[1]{
+    \fontsize{8pt}{10pt}
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont #1
+}
+
+%%% link
+\newcommand{\link}[2]{
+    \fontsize{12pt}{15pt}
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
+    \href{#2}{#1}
+}
+
+%%% section header
+\newcommand{\sechead}[1]{
+    \fontsize{10pt}{12pt}
+    \fontspec[Path=resources/fonts/Muli/]{Muli-Regular}\selectfont #1
+}
+
+%%% section subheader
+\newcommand{\secsub}[1]{
+    \fontsize{10pt}{12pt}
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Bold}\selectfont #1
+}
+
+%%% content
+\newcommand{\content}[1]{
+    \fontsize{10pt}{12pt}
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Regular}\selectfont #1
 }
 
 % Environments
@@ -55,7 +87,7 @@
 \newenvironment{subheader}[1]{
      \table[h]\centering
      \tabularx{\textwidth}{*{#1}{Y}}
-     \hline
+     \hline\\[-2.5ex]
 }{
      \endtabularx\\
      \hrulefill
