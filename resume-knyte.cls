@@ -7,16 +7,19 @@
 }
 \ProcessOptions\relax
 \LoadClass{article}
+\pagenumbering{gobble}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+\setlength{\parskip}{0pt}
 
 % Misc. package Imports
-\usepackage[hmargin=1.00cm, vmargin=0.75cm]{geometry}
+\usepackage[hmargin=0.4in, vmargin=0.5in]{geometry}
 \usepackage{verbatim} % to enable multiline comments
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 % Table setup
 \usepackage{tabularx,tabulary}
-\newcolumntype{Y}{>{\arraybackslash}X} % subheader column
-\newcolumntype{s}{>{\hsize=2\hsize}r} % section column
+\newcolumntype{s}{>{\raggedright\hsize=2\hsize}l} % section column
 
 % Color definitions
 \usepackage[usenames, dvipsnames]{xcolor} 
@@ -42,21 +45,25 @@
              ItalicFont=Muli-Italic]{Muli-Light}
 
 % Commands
-%% makeheader
-\newcommand{\makeheader}[1]{
-	\centering{
-		\color{primary}
-		\fontsize{42pt}{52pt}
-		\fontspec[Path=resources/fonts/Muli/]{Muli-Bold}\selectfont #1
-	}
-}
+%% variables
+%%% entryspace
+\newcommand{\entryspace}{4pt}
+
+%%% labeltab
+\newcommand{\labeltab}{2in}
+
+%%% datetab
+\newcommand{\datetab}{5.7in}
+
+%%% desctab - description tab
+\newcommand{\desctab}{5.55in}
 
 %% font specifications
 %%% site
 \newcommand{\site}[3]{
-    \fontsize{8pt}{10pt}
+    \fontsize{9pt}{10pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont #1
-    \fontsize{12pt}{15pt}
+    \fontsize{10pt}{10pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
     \href{#3}{#2}
 }
@@ -79,24 +86,60 @@
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
 }
 
+%% makeheader
+\newcommand{\makeheader}[1]{
+	\centering{
+		\color{primary}
+		\fontsize{55pt}{68pt}
+		\fontspec[Path=resources/fonts/Muli/]{Muli-Bold}\selectfont #1
+        \\[0.2ex]
+	}
+}
+
+%% entry
+\newcommand{\entry}[4]{
+    \>\secsub{#1} \> \content{#2} \' \\
+    \>\content{#3}\\[\entryspace]
+    \>\ 
+    \begin{minipage}{\desctab}
+    \content{#4} \\
+    \end{minipage}\\
+}
+
+%% skillset
+\newcommand{\skillset}[2]{
+    \> \content{#1: #2} \\
+}
+
+%% honor
+\newcommand{\honor}[2]{
+    \> \content{#1} \> \content{#2} \' \\
+}
+
 % Environments
+%% entrytab - tabbing with modified spacing
+\newenvironment{entrytab}{
+    \setlength{\topsep}{2pt}%
+    \setlength{\partopsep}{0pt}%
+    \tabbing
+}{
+    \endtabbing
+}
+
 %% subheader
 \newenvironment{subheader}[1]{
-     \table[h]\centering
-     \tabularx{\textwidth}{*{#1}{Y}}
-     \hline\\[-1.5ex]
+     \centering
+     \hrulefill\\[1ex]
 }{
-     \endtabularx\\
-     \hrulefill\\[-4.5ex]
-     \endtable
+     \hrulefill\\[1ex]
 }
 
 %% topic
 \newenvironment{topic}[1]{
-    \table[h]\centering
-    \tabularx{\textwidth}{Xs}
-    \sechead{#1} & \content
+    \begin{entrytab}
+        \hspace*{\labeltab}\= \hspace*{\datetab}\= \kill
+        \sechead{#1}
 }{
-    \endtabularx\\
-    \endtable
+    \\[-6.5ex]
+    \end{entrytab}
 }

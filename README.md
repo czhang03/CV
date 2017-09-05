@@ -1,10 +1,12 @@
 # resume
 
-A single-column XeTeX resume template with lots of breathing room
+A single-column XeTeX resume template with lots of breathing room and a simple
+top-down, left-right hierarchy
 
 ## Installation
 
-There are no releases yet for this project.
+Either clone the latest version of this repository or download and extract an
+archive from [releases](https://github.com/knyte/resume/releases).
 
 ## Usage
 
@@ -22,11 +24,3 @@ Sans](https://fonts.google.com/specimen/PT+Sans?selection.family=PT+Sans)
 typefaces, redistributed under the Open Font License. A copy of the Open Font
 License (labeled 'OFL.txt') can be found within each typeface's directory in
 the /resources/fonts subdirectory.
-
-## Acknowledgement
-
-The organization, design, and contents of this package were based in
-large part on the
-[Deedy-Resume template](https://github.com/deedy/Deedy-Resume). The starter
-contents for both the TeX template and the .cls file were based on the
-OpenFont variation of the Deedy-Resume template.
