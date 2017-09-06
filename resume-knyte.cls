@@ -50,18 +50,18 @@
 \newcommand{\entryspace}{4pt}
 
 %%% labeltab
-\newcommand{\labeltab}{2in}
+\newcommand{\labeltab}{1.5in}
 
 %%% datetab
-\newcommand{\datetab}{5.7in}
+\newcommand{\datetab}{6.2in}
 
 %%% desctab - description tab
-\newcommand{\desctab}{5.55in}
+\newcommand{\desctab}{6.05in}
 
 %% font specifications
 %%% site
 \newcommand{\site}[3]{
-    \fontsize{9pt}{10pt}
+    \fontsize{8pt}{9pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont
     \MakeUppercase{#1}
     \fontsize{10pt}{10pt}
