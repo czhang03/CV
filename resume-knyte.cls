@@ -62,7 +62,8 @@
 %%% site
 \newcommand{\site}[3]{
     \fontsize{9pt}{10pt}
-    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont #1
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont
+    \MakeUppercase{#1}
     \fontsize{10pt}{10pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
     \href{#3}{#2}
