@@ -61,7 +61,7 @@
 %% font specifications
 %%% site
 \newcommand{\site}[3]{
-    \fontsize{8pt}{9pt}
+    \fontsize{8.5pt}{10pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont
     \MakeUppercase{#1}
     \fontsize{10pt}{10pt}
