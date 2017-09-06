@@ -81,6 +81,13 @@
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Bold}\selectfont #1
 }
 
+%%% short description
+\newcommand{\shortdesc}[1]{
+    \fontsize{9pt}{12pt}
+    \fontspec[Path=resources/fonts/PT_Sans/]
+    {PT_Sans-Web-Regular}\selectfont\MakeUppercase{#1}
+}
+
 %%% content
 \newcommand{\content}{
     \fontsize{10pt}{12pt}
@@ -100,7 +107,7 @@
 %% entry
 \newcommand{\entry}[4]{
     \>\secsub{#1} \> \content{#2} \' \\
-    \>\content{#3}\\[\entryspace]
+    \>\shortdesc{#3}\\[\entryspace]
     \>\ 
     \begin{minipage}{\desctab}
     \content{#4} \\
