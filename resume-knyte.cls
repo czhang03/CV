@@ -13,7 +13,7 @@
 \setlength{\parskip}{0pt}
 
 % Misc. package Imports
-\usepackage[hmargin=0.4in, vmargin=0.5in]{geometry}
+\usepackage[hmargin=0.4in, vmargin=0.4in]{geometry}
 \usepackage{verbatim} % to enable multiline comments
 \usepackage[hidelinks]{hyperref}
 
@@ -47,7 +47,7 @@
 % Commands
 %% variables
 %%% entryspace
-\newcommand{\entryspace}{4pt}
+\newcommand{\entryspace}{6pt}
 
 %%% labeltab
 \newcommand{\labeltab}{1.5in}
@@ -91,7 +91,7 @@
 \newcommand{\makeheader}[1]{
 	\centering{
 		\color{primary}
-		\fontsize{55pt}{68pt}
+		\fontsize{52pt}{65pt}
 		\fontspec[Path=resources/fonts/Muli/]{Muli-Bold}\selectfont #1
         \\[0.2ex]
 	}
