@@ -146,7 +146,7 @@
 \newenvironment{topic}[1]{
     \begin{entrytab}
         \hspace*{\labeltab}\= \hspace*{\datetab}\= \kill
-        \sechead{#1}
+        \sechead{#1}\\[-\baselineskip]
 }{
     \\[-6.5ex]
     \end{entrytab}
