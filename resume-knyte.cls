@@ -13,7 +13,7 @@
 \setlength{\parskip}{0pt}
 
 % Misc. package Imports
-\usepackage[hmargin=0.4in, vmargin=0.4in]{geometry}
+\usepackage[hmargin=0.5in, vmargin=0.5in]{geometry}
 \usepackage{verbatim} % to enable multiline comments
 \usepackage[hidelinks]{hyperref}
 
@@ -98,7 +98,7 @@
 \newcommand{\makeheader}[1]{
 	\centering{
 		\color{primary}
-		\fontsize{45pt}{50pt}
+		\fontsize{48pt}{55pt}
 		\fontspec[Path=resources/fonts/Muli/]{Muli-Bold}\selectfont #1
         \\[0.2ex]
 	}
@@ -121,7 +121,7 @@
 
 %% honor
 \newcommand{\honor}[2]{
-    \> \content{#1} \> \content{#2} \' \\
+    \> \content{#1} \> \content{#2} \'
 }
 
 % Environments
