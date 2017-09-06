@@ -47,7 +47,7 @@
 % Commands
 %% variables
 %%% entryspace
-\newcommand{\entryspace}{6pt}
+\newcommand{\entryspace}{5pt}
 
 %%% labeltab
 \newcommand{\labeltab}{1.5in}
@@ -83,14 +83,14 @@
 
 %%% short description
 \newcommand{\shortdesc}[1]{
-    \fontsize{9pt}{12pt}
+    \fontsize{8.5pt}{12pt}
     \fontspec[Path=resources/fonts/PT_Sans/]
     {PT_Sans-Web-Regular}\selectfont\MakeUppercase{#1}
 }
 
 %%% content
 \newcommand{\content}{
-    \fontsize{10pt}{12pt}
+    \fontsize{9.5pt}{12pt}
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
 }
 
@@ -98,7 +98,7 @@
 \newcommand{\makeheader}[1]{
 	\centering{
 		\color{primary}
-		\fontsize{52pt}{65pt}
+		\fontsize{45pt}{50pt}
 		\fontspec[Path=resources/fonts/Muli/]{Muli-Bold}\selectfont #1
         \\[0.2ex]
 	}
