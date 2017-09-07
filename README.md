@@ -16,6 +16,9 @@ the resume generated using resume.tex.
 Either clone the latest version of this repository or download and extract an
 archive from [releases](https://github.com/knyte/resume/releases).
 
+You can also find this template on
+[Overleaf](https://www.overleaf.com/latex/templates/resume-knyte/bkrdzqcqbmqd).
+
 ## Usage
 
 This package provides a class file and a .tex template filled with lipsum. You
