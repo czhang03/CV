@@ -1,5 +1,8 @@
 # resume
 
+[![GitHub Release](https://img.shields.io/github/tag/knyte/resume.svg)](https://github.com/knyte/resume/releases)
+[![License](https://img.shields.io/github/license/knyte/resume.svg)](https://github.com/knyte/resume/blob/master/LICENSE)
+
 A single-column XeTeX resume template with lots of breathing room and a simple
 top-down, left-right hierarchy
 
