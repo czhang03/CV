@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % resume - one page, one column
 % XeLaTeX Template
@@ -10,11 +11,12 @@
 % This template is primarily designed for
 % undergraduate EE/CE/CS students applying for
 % industry roles in software engineering
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[]{resume-knyte}
- 
+\usepackage{hyperref}
+
 \begin{document}
 
 %%%%%%%%%
@@ -22,7 +24,7 @@
 %%%%%%%%%
 
 % \makeheader{title/name}
-\makeheader{Jon Snow}
+\makeheader{Cheng Zhang}
 
 %%%%%%%%%%%%
 % SUBHEADER
@@ -30,102 +32,110 @@
 
 % argument to environment should match number of sites
 \begin{subheader}{1}
-    % leave third argument empty to specify no hyperlink
-    \site{House}{Stark}{House Targaryen}
-    \site{Realm}{Kingdom of The North}{
-    https://www.north.westeros.gov}
-    \site{Castle}{Winterfell}{}
-    \site{Direwolf}{Ghost}{}
-    \site{Raven}{jon@maesterwolkan.north}{mailto:jon@maesterwolkan.north}\\
-\end{subheader}
+% leave third argument empty to specify no hyperlink
+    \site{GitHub}{Chantisnake}{https://github.com/chantisnake}
+    \site{Email}{zcsx.ok at outlook dot com}{mailto://zcsx.ok@outlook.com}
+    \site{Phone}{(+1)508-818-8290}{}\\
 
-%%%%%%%%%
-% SKILLS
-%%%%%%%%%
-\begin{topic}{Skills}
-    % \skillset{category}{members}
-    \skillset{Languages}{C, SNOBOL, Common Tongue, Draco}
-    \skillset{Tools}{boats, Valyrian steel, dragonglass,
-        {\fontfamily{cmr}\selectfont \LaTeX}}
-    \skillset{Interests}{brooding, saving the North, living,
-        bending the knee, bending Dany}
-    \\ % hardcoded due to entry spacing
-\end{topic}
+\end{subheader}
 
 %%%%%%%%%%%%
 % EDUCATION
 %%%%%%%%%%%%
 \begin{topic}{Education}
+
     % \entry{institution}{dates}{subtitle}{description}
-    \entry{Maester Luwin's Tutelage}{285 AL - 298 AL}
-    {Highborn education}
-    {Additionally received martial training from Ser Rodrik Cassel; skilled
-    at sword-fighting, archery, learning life lessons from dwarves, and acting}
+
+    \entry{Wheaton College}{Sep. 2014 - Jun. 2018}
+    {Bachelor of Art in Mathematics}
+    {Major in Mathematics, Minor in Computer Science and Economics\\
+    Complete \textbf{42 credit hour} with \textbf{Major GPA: 3.9}, \textbf{General GPA: 3.84}}
+
+
+    \entry{London School Of Economics}{Sep. 2016 - Jun. 2017}
+    {Study Aboard}
+    {Took
+    \textbf{EC221 Principles of Econometrics},
+    \textbf{EC202 Microeconomic Principles II},
+    \textbf{MA300 Game Theory},
+    \textbf{MA211 Algebra and Number Theory},
+    \textbf{MA315 Algebra and its Applications}
+    }
+
 \end{topic}
+
+
+
+%%%%%%%%%
+% SKILLS
+%%%%%%%%%
+\begin{topic}{Skills}
+
+    % \skillset{category}{members}
+
+    \entry{Mathematics Field}{~}
+    {Graph Theory, Basic Algebra, Basic Topology, Basic Logic}
+    { Familiar with many concepts in Graph Theory.\\
+    Knows the basic about analysis, point-set topology and algebra.\\
+    Knows the basic about Computation Theory, Type Theory and Curry Howard Isomorphism }
+
+    \entry{Programming Language}{~}
+    {Familiar with many Programming Languages}
+    {Experienced in Python and Powershell\\
+    Familiar with Haskell, F\#, Coq, TypeScript, JavaScript\\
+    Knows the basic about idris, Scala, Elm}
+
+
+    \\ % hardcoded due to entry spacing
+\end{topic}
+
 
 %%%%%%%%%%%%%
 % EXPERIENCE
 %%%%%%%%%%%%%
 \begin{topic}{Experience}
+
     % \entry{role}{dates}{team/company}{description}
-    \entry{Warden of the North}{304 AL - present}
-    {Winterfell, The North, The Seven Kingdoms}
-    {Combatting the White Walkers in the North, negotiating truces and
-    alliances with claimants to the Iron Throne, and restoring order in the
-    North}
-    \entry{King in the North}{303 AL - 304 AL}
-    {Winterfell, Kingdom of the North}
-    {Restored Stark rule in Winterfell; defeated Houses Bolton, Umber, and
-    Karstark in battle, and began the process of rebuilding the North after
-    War of the Five Kings}
-    \entry{Lord Commander}{302 AL - 303 AL}
-    {The Night's Watch}
-    {Began preparations for defense against the White Walkers, rescued
-    Free Folk from Beyond the Wall, negotiated with multiple kings to
-    attempt to preserve peace and safety}
-    \entry{Brother}{298 AL - 302 AL}
-    {The Night's Watch}
-    {Went on expeditions beyond the Wall, engaged with wildlings (within
-    and outside caves), and investigated threats to the living from the Army
-    of the Dead}
+
+    \entry{Software Leader}{Jun. 2015 - Dec. 2017}
+    {Lexomics Research Team}
+    {Lead the development of \href{https://github.com/WheatonCS/Lexos}{Lexos}, a web app for text analysis workflow}
+
+    \entry{Mathematics Research}{Jun. 2016 - Jul. 2016}
+    {Weaton College Mathematics Department}
+    {Work with \href{https://wheatoncollege.edu/academics/faculty-directory/rochelle-shelly-leibowitz/}{Prof. leibowitz}
+    on the topic of Divisibility Graph}
+
+    \entry{Mathematics Research}{Sep. 2017 - Jun. 2018}
+    {Honor Thesis}
+    {Research on graph tournament, inspired by \href{https://www.maa.org/sites/default/files/pdf/upload_library/22/Allendoerfer/1981/0025570x.di021114.02p00982.pdf}{King Chicken Theorem}.
+    Our Research focus on the kings behavior in improper tournaments (tournaments with ties)}
+
+
+    \entry{Open-source Contributor}{Sep. 2014 - present}
+    {Contributor to Many Open Source Project}
+    {Involved in the development of \href{https://github.com/janikvonrotz/awesome-powershell}{Awesome-Powershell}, \href{https://github.com/pcgeek86/PSGitHub}{PSGitHub}.
+    Contribute Ideas to \href{https://github.com/python/typing}{python/typing}, \href{https://github.com/python/mypy}{mypy} and \href{https://github.com/siegebell/vscoq}{VSCoq}.
+    Help to provide Minor improvement to \href{https://github.com/FStarLang/FStar}{FStar} and many other Projects.}
+
+\\ % add spacing
 \end{topic}
+
+
 
 %%%%%%%%%%%
 % PROJECTS
 %%%%%%%%%%%
-\begin{topic}{Battles}
-    % \entry{name}{dates}{tools used}{description}
-    \entry{Wight Hunt}{304 AL}
-    {Weapons: Valyrian steel sword Longclaw, dragonglass daggers}
-    {Successfully ventured beyond the Wall, faced the Night's King,
-    survived on a frozen lake for six days, and captured a wight to present
-    in King's Landing to prove the White Walkers' existence}
-    \entry{Battle of the Bastards}
-    {303 AL}
-    {Weapon: Valyrian steel sword Longclaw}
-    {Defeated Ramsay Bolton in single combat while leading an outnumbered
-    army to reclaim Winterfell and The North in the name of House Stark;
-    led combined force of Free Folk, bannermen, and The Vale}
-    \entry{Battle of Hardhome}{302 AL}
-    {Weapon: Valyrian steel sword Longclaw}
-    {Faced an army of White Walkers led by the Night's King upon one of the
-    final assaults upon the living beyond the Wall; successfully saved 5,000
-    Free Folk in first major engagement beyond the Wall as Lord Commander of
-    the Night's Watch}
-    \entry{Battle of Castle Black}{301 AL}
-    {Weapon: steel greatsword}
-    {Defended the Wall from King-Beyond-The-Wall Mance Rayder's unprecedented
-    army of Free Folk; coordinated response with Stannis of House Baratheon}
-\end{topic}
+\begin{topic}{Projects}
 
-%%%%%%%%%
-% HONORS
-%%%%%%%%%
-\begin{topic}{Titles}
-    % \honor{award}{date/location}
-    \honor{Right Proper Lad}{304 AL}\\
-    \honor{King in the North}{303 AL}\\
-    \honor{Rightful Heir to the Iron Throne}{285 AL}
+    % \entry{name}{dates}{tools used}{description}
+
+    \entry{Markdown for Academia}{Mar. 2017 - Apr. 2017}
+    {An easy to use markup language designed for academic writing}
+    {Semitics based on pandoc markdown, added many more feature to support academic writing.\\
+    Can be compiled easily to HTML, PDF, \LaTeX{} and many other formats.}
+
 \end{topic}
 
 \end{document}
+
