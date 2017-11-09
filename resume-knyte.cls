@@ -115,10 +115,11 @@
 }
 
 %% skillset
-\newcommand{\skillset}[3]{
-    \>\secsub{#1} \> \content{#2} \' \\
+\newcommand{\skillset}[2]{
+    \>\secsub{#1}\\[\entryspace]
+    \>\
     \begin{minipage}{\desctab}
-    \content{#3} \\
+    \content{#2} \\
     \end{minipage}\\
 }
 
