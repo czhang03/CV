@@ -22,7 +22,7 @@
 \newcolumntype{s}{>{\raggedright\hsize=2\hsize}l} % section column
 
 % Color definitions
-\usepackage[usenames, dvipsnames]{xcolor} 
+\usepackage[usenames, dvipsnames]{xcolor}
 % \definecolor{NAME}{HTML}{HEXHEX}
 \definecolor{primary}{HTML}{000000}
 
@@ -108,15 +108,18 @@
 \newcommand{\entry}[4]{
     \>\secsub{#1} \> \content{#2} \' \\
     \>\shortdesc{#3}\\[\entryspace]
-    \>\ 
+    \>\
     \begin{minipage}{\desctab}
     \content{#4} \\
     \end{minipage}\\
 }
 
 %% skillset
-\newcommand{\skillset}[2]{
-    \> \content{#1: #2} \\
+\newcommand{\skillset}[3]{
+    \>\secsub{#1} \> \content{#2} \' \\
+    \begin{minipage}{\desctab}
+    \content{#3} \\
+    \end{minipage}\\
 }
 
 %% honor
