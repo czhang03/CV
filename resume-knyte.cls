@@ -94,6 +94,12 @@
     \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Regular}\selectfont
 }
 
+%%% content
+\newcommand{\italiccontent}{
+    \fontsize{9.5pt}{12pt}
+    \fontspec[Path=resources/fonts/PT_Sans/]{PT_Sans-Web-Italic}\selectfont
+}
+
 %% makeheader
 \newcommand{\makeheader}[1]{
 	\centering{
@@ -120,6 +126,14 @@
     \>\
     \begin{minipage}{\desctab}
     \content{#2} \\
+    \end{minipage}\\
+}
+
+%% Publication
+\newcommand{\publication}[4]{
+    \>
+    \begin{minipage}{\desctab}
+        \content{#1}\italiccontent{#2}\content{#3}\italiccontent{#4}\\
     \end{minipage}\\
 }
 
