@@ -130,10 +130,11 @@
 }
 
 %% Publication
-\newcommand{\publication}[4]{
+%% \publication[notice]{author}{title}{jornal}
+\newcommand{\publication}[4][]{
     \>
     \begin{minipage}{\desctab}
-        \content{#1}\italiccontent{#2}\content{#3}\italiccontent{#4}\\
+        \content{#2},\content{``#3''},\italiccontent{#4}.\italiccontent{#1}\\
     \end{minipage}\\
 }
 
