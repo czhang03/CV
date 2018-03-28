@@ -1,180 +1,138 @@
-% !TeX program = xelatex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% resume - one page, one column
-% XeLaTeX Template
-% Version 1.1 (09.05.2017)
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
 %
-% Author: knyte (https://github.com/knyte)
-%
-% Repository: https://github.com/knyte/resume
-%
-% This template is primarily designed for
-% undergraduate EE/CE/CS students applying for
-% industry roles in software engineering
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
-\documentclass[]{resume-knyte}
-\usepackage{hyperref}
 
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex or lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+% \usepackage{titlesec}                            % used to change the section spacing
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Cheng}{Zhang}
+\title{Curriculum vitae}
+\email{zcsx.ok@outlook.com}                               % optional, remove / comment the line if not wanted
+\homepage{chantisnake.github.io}                         % optional, remove / comment the line if not wanted
+\social[github]{chantisnake}                              % optional, remove / comment the line if not wanted
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with multiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       --------------------------------------------------------
 
-%%%%%%%%%
-% HEADER
-%%%%%%%%%
+% Display the CV title
+\makecvtitle{}
 
-% \makeheader{title/name}
-\makeheader{Cheng Zhang}
-
-%%%%%%%%%%%%
-% SUBHEADER
-%%%%%%%%%%%%
-
-% argument to environment should match number of sites
-\begin{subheader}{1}
-% leave third argument empty to specify no hyperlink
-    \site{GitHub}{Chantisnake}{https://github.com/chantisnake}
-    \site{Email}{zcsx.ok at outlook dot com}{mailto://zcsx.ok@outlook.com}
-    \site{Phone}{(+1)508-818-8290}{}\\
-
-\end{subheader}
-
-%%%%%%%%%%%%
-% EDUCATION
-%%%%%%%%%%%%
-\begin{topic}{Education}
-
-    % \entry{institution}{dates}{subtitle}{description}
-
-    \entry{Wheaton College, Norton, MA}{Sep. 2014 - Present}
-    {Candidate for Bachelor of Art, Expected May 2018}
-    {Major in Mathematics, Minor in Computer Science and Economics.\\
-     Major GPA: 3.9, General GPA: 3.84.\\
-    Honors: Dean's List (for all the 4 semesters), Wheaton Fellow, Faculty Student Grant.}
+% set the space between \cventry
+\setlength{\parskip}{2.5px}
 
 
-    \entry{London School Of Economics, London, England}{Sep. 2016 - Jun. 2017}
-    {Study Aboard}
-    {Completed course work: Principles of Econometrics, Microeconomic Principles II, Game Theory,
-     Algebra and Number Theory, Algebra and its Applications.
-    }
+\section{Education}
 
-    \\ % hard coded to adjust spacing
-\end{topic}
+\cventry{2018 --- Now}
+{Doctor of Philosophy, Thoertical Computer Science}
+{Boston University}
+{Boston, MA} {}
+{}  % description
 
+\cventry{2014 --- 2018}
+{Bachelor of Art, Mathematics}
+{Wheaton College}
+{Norton, MA} {}
+{Minor in Computer Science and Economics. Major GPA\@: 3.9\\
+Honors: Dean's List (for all the 6 semesters), Wheaton Fellow, Faculty Student Grant.}
 
-%%%%%%%%%%%
-% Publications
-%%%%%%%%%%%
-\begin{topic}{Publications \& Talks}
-
-    % \publication{Author}{Notice}{Title}{Conference}
-    \publication{Zhang. C.}
-    {Kings in Quasi-transitive Oriented Graph}
-    {Wheaton Summit For Woman In STEM, 2018}
-
-    \publication{Zhang. C., Feng. W., Steffens. E., Landaluce d. A., Kleinman S., LeBlanc D. M.}
-    {Lexos 2017: Building Reliable Software in Python}
-    {CCSCNE 2018 – Conference for Computing in Small Colleges, UNH-Manchester, April 2018}
-
-    \\
-\end{topic}
+\cventry{2016 --- 2017}
+{Study Aboard, Economics}
+{London School Of Economics}
+{London, United Kingdom}{}
+{}  % description
 
 
-%%%%%%%%%
-% SKILLS
-%%%%%%%%%
-\begin{topic}{Skills}
 
-    % \skillset{category}{members}
+\section{Publication and Talks}
 
-    \skillset{Programming Languages}
-    {Experienced in Python and Powershell.\\
-    Familiar with Haskell, F\#, Coq, TypeScript, JavaScript and \LaTeX{}.\\
-    Basic idris, Scala, Elm, C\#, C++ and Java.}
+\cventry{2018}
+{Zhang C.}
+{Kings in Quasi-transitive Oriented Graph}
+{Wheaton Summit For Woman In STEM}
+{}{}
 
-    \skillset{Languages}
-    {Fluent in English, Native Speaker in Chinese.}
-
-    \\ % hardcoded due to entry spacing
-\end{topic}
+\cventry{2018}
+{Zhang C., Feng W., Steffens E., Landaluce A., Kleinman S., LeBlanc D. M.}
+{Lexos 2017: Building Reliable Software in Python}
+{Conference for Computing in Small Colleges, UNH-Manchester}
+{}{}
 
 
-%%%%%%%%%%%%%
-% EXPERIENCE
-%%%%%%%%%%%%%
-\begin{topic}{Experiences}
 
-    % \entry{role}{dates}{team/company}{description}
-
-    \entry{Mathematics Honor Thesis}{Sep. 2017 - Present}
-    {Wheaton College Mathematics Department, Norton, MA}
-    {Research on graph tournament, inspired by \href{https://www.maa.org/sites/default/files/pdf/upload_library/22/Allendoerfer/1981/0025570x.di021114.02p00982.pdf}{King Chicken Theorem}.
-    My research focus on the kings behavior in improper tournaments (tournaments with ties).}
-
-    \entry{Software Leader}{Jun. 2015 - Present}
-    {Lexomics Research Group, Wheaton College, Norton, MA}
-    {- Lead the development of \href{https://github.com/WheatonCS/Lexos}{Lexos}, a web app for text analysis workflow.\\
-    - Help the team to adopt modern software development paradigm and workflow.\\
-    - Designed a new architecture and a new python style guide for the project.}
-
-    \entry{Open-source Contributor}{Sep. 2014 - Present}
-    {Contributor to Many Open Source Projects}
-    {Core developer of \href{https://github.com/janikvonrotz/awesome-powershell}{Awesome-Powershell}, \href{https://github.com/pcgeek86/PSGitHub}{PSGitHub}.
-    Contribute Ideas to \href{https://github.com/python/typing}{python/typing}, \href{https://github.com/python/mypy}{mypy} and \href{https://github.com/siegebell/vscoq}{VSCoq}.
-    Help to provide Minor improvement to \href{https://github.com/FStarLang/FStar}{FStar} and many other Projects.}
-
-    \entry{Independent Mathematics Research}{Jun. 2016 - Jul. 2016}
-    {Wheaton College Mathematics Department, Norton, MA}
-    {Work with \href{https://wheatoncollege.edu/academics/faculty-directory/rochelle-shelly-leibowitz/}{Prof. Leibowitz}
-    on the topic of \href{https://chantisnake.github.io/2016/05/22/explain-the-divisibility-graph/}{Divisibility Graph}.
-    Found a way to construct prime divisibility graph directly, and a way to construct divisibility graph based on its factors.}
-
-\\ % add spacing
-\end{topic}
-
-\newpage
-
-%%%%%%%%%%%
-% PROJECTS
-%%%%%%%%%%%
-\begin{topic}{Projects}
-
-    % \entry{name}{dates}{summary}{description}
-
-    \entry{PythonZ}{Sep. 2017 - Present}
-    {Functional Programming In Python}
-    {Project still in development.
-    This project aims to showcase python's new type system, and implement typed functional feature in python.}
-
-    \entry{Markdown for Academia}{Mar. 2017 - Apr. 2017}
-    {An easy to use markup language designed for academic writing}
-    {Semitics based on pandoc markdown, added many more feature to support academic writing.\\
-    Can be compiled easily to HTML, PDF, \LaTeX{} and many other formats.}
-    \\
-
-\end{topic}
-
-%%%%%%%%%%%
-% EMPLOYMENT
-%%%%%%%%%%%
-
-\begin{topic}{Employment}
-    \entry{Student Technician}{Sep 2015 - Present}
-    {Second Level Technical Position working in the ITSS Help Desk}
-    {First line of communication with end users.
-    High level of Customer Service is a major part of this position.
-    Experienced with computer hardware and software.}
-
-    \entry{Math CS Grader}{Sep 2017 - Present}
-    {Grader for Theory of Probability}
-    {Grade the homework on theory of probability,
-    and send the data analysis (grade distribution and error reason distribution)
-    of the homework back to the professor every week.}
-\end{topic}
+\section{Current Research}
+\cventry{2017}
+{Mathematics Honor Thesis}
+{Wheaton College Mathematics Department}
+{Norton, MA}{}
+{Studies kings in generalization of tournament,
+with a special focus on quasi-transitive oriented graph.}
 
 
+
+\section{Skills}
+
+\cventry{}
+{Programming Languages}{}{}{}
+{Experienced in Python and Powershell.\\
+Familiar with Haskell, F\#, Coq, TypeScript, JavaScript and \LaTeX{}.\\
+Basic idris, Scala, Elm, C\#, C++ and Java.}
+
+\cventry{}
+{Languages}{}{}{}
+{Fluent in English, Native Speaker in Chinese.}
+
+
+
+\section{Employment}
+\cventry{2015 --- 2018}
+{Student Technician}
+{Wheaton College Technology Support}
+{Norton, MA}{}
+{First line of communication with end users.
+High level of Customer Service is a major part of this position.
+Experienced with computer hardware and software.}
+
+\cventry{2017 --- 2018}
+{Math CS Grader}
+{Wheaton College Department of Mathematics}
+{Norton, MA}{}
+{Grade the homework on theory of probability,
+and send the data analysis (grade distribution and error reason distribution)
+of the homework back to the professor every week.}
 
 
 \end{document}
-
