@@ -1,0 +1,144 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex or lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+% \usepackage{titlesec}                            % used to change the section spacing
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Cheng}{Zhang}
+\title{Resume for Wheaton Graduate Fellowship}
+\email{zcsx.ok@outlook.com}                               % optional, remove / comment the line if not wanted
+\social[github]{chantisnake}                              % optional, remove / comment the line if not wanted
+\extrainfo{View Full CV\@: \href{https://github.com/chantisnake/resume/blob/master/main.pdf}{https://github.com/chantisnake/resume/blob/master/main.pdf}}
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with multiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       --------------------------------------------------------
+
+% Display the CV title
+\makecvtitle{}
+
+% set the space between \cventry
+\setlength{\parskip}{2.5px}
+
+
+\section{Education}
+
+\cventry{2014 --- 2018}
+{Bachelor of Art, Mathematics}
+{Wheaton College}
+{Norton, MA} {}
+{Minor in Computer Science and Economics. Major GPA\@: 3.9, Overall GPA\@: 3.84\\
+Honors: Dean's List (for all the 6 semesters), Wheaton Fellow, Faculty Student Grant.}
+
+\cventry{2016 --- 2017}
+{Study Aboard, Economics}
+{London School Of Economics}
+{London, United Kingdom}{}
+{}  % description
+
+
+
+\section{Publication and Talks}
+
+\cventry{2018}
+{Zhang C., Feng W., Steffens E., Landaluce A., Kleinman S., LeBlanc D. M.}
+{Lexos 2017: Building Reliable Software in Python}
+{Conference for Computing in Small Colleges, UNH-Manchester}
+{(Article)}{}
+
+\cventry{2018}
+{Zhang C.}
+{Kings in Quasi-transitive Oriented Graph}
+{Wheaton Summit For Woman In STEM}
+{(Talk)}{}
+
+
+
+\section{Research Projects}
+
+\cventry{2017 --- Now}
+{Mathematics Honor Thesis}
+{Wheaton College Department of Mathematics}
+{Norton, MA}{}
+{Studies kings in generalization of tournament,
+with a special focus on quasi-transitive oriented graph.}
+
+\cventry{2015 --- 2018}
+{Software Leader}
+{Lexomics Research Group, Wheaton College}
+{Norton, MA}{}
+{Lead the development of \href{https://github.com/WheatonCS/Lexos}{Lexos}, a web app for text analysis workflow.
+Help the team to adopt modern software development paradigm and workflow.
+Designed a new architecture and a new python style guide for the project.}
+
+
+\section{Experience}
+
+\cventry{2015 --- 2018}
+{Software Leader}
+{Lexomics Research Group, Wheaton College}
+{Norton, MA}{}
+{- Lead the development of \href{https://github.com/WheatonCS/Lexos}{Lexos}, a web app for text analysis workflow.\\
+- Help the team to adopt modern software development paradigm and workflow.\\
+- Designed a new architecture and a new python style guide for the project.}
+
+\cventry{2017 --- 2018}
+{Math CS Grader}
+{Wheaton College Department of Mathematics}
+{Norton, MA}{}
+{Grade the homework on theory of probability,
+and send the data analysis (grade distribution and error reason distribution)
+of the homework back to the professor every week.}
+
+\cventry{2015 --- 2018}
+{Student Technician}
+{Wheaton College Technology Support}
+{Norton, MA}{}
+{First line of communication with end users.\\
+High level of Customer Service is a major part of this position.\\
+Experienced with computer hardware and software.}
+
+\cventry{2016 --- 2016}
+{Independent Mathematics Research}
+{Wheaton College Department of Mathematics}
+{Norton, MA}{}
+{Work with \href{https://wheatoncollege.edu/academics/faculty-directory/rochelle-shelly-leibowitz/}{Prof. Leibowitz}
+on the topic of \href{https://chantisnake.github.io/2016/05/22/explain-the-divisibility-graph/}{Divisibility Graph}.
+Found a way to construct prime divisibility graph directly,
+and a way to construct arbitrary divisibility graph based on its factors.}
+
+
+\end{document}
