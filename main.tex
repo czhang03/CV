@@ -18,8 +18,9 @@
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex or lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
-% for extra icons
-\usepackage{fontawesome}
+
+\usepackage{fontawesome}  % for extra icons
+\usepackage{enumitem}  % manage spacing for enum
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -67,8 +68,7 @@
 {Doctor of Philosophy, Thoertical Computer Science} {}
 {Boston University}
 {Boston, MA}
-{\textbf{Research Interests}:
-Formal Logic, Type Thoery, Category Thoery, Homotopy Type Theory.}  % description
+{\textbf{Research Interests}: Formal Logic, Type Thoery, Category Thoery}  % description
 
 \cventry{2014 --- 2018}
 {Bachelor of Art, Mathematics} {with department honor, magna cume laude}
@@ -171,21 +171,32 @@ Basic idris, Scala, Elm, C\#, C++ and Java.}
 
 
 \section{Employment}
+
+\cventry{2019 --- Now}
+{Teaching Fellow}
+{Boston University}
+{Boston, MA}{}
+{
+  \begin{itemize}[nosep]
+    \item CS 132: Geometric Algorithm, 2019 Fall
+    \item CS 230: Principle of Programming Language, 2019 Spring
+  \end{itemize}
+}
+
+\cventry{2019}
+{Grader}
+{Boston University CS 511 Formal Method}
+{Boston, MA}{}{}
+
 \cventry{2015 --- 2018}
 {Student Technician}
 {Wheaton College Technology Support}
-{Norton, MA}{}
-{First line of communication with end users.\\
-High level of Customer Service is a major part of this position.\\
-Experienced with computer hardware and software.}
+{Norton, MA}{}{}
 
 \cventry{2017 --- 2018}
-{Math CS Grader}
-{Wheaton College Department of Mathematics}
-{Norton, MA}{}
-{Grade the homework on theory of probability,
-and send the data analysis (grade distribution and error reason distribution)
-of the homework back to the professor every week.}
+{Grader}
+{Wheaton College MATH 241 Theory of Probability}
+{Norton, MA}{}{}
 
 
 \end{document}
