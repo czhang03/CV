@@ -1,0 +1,240 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex or lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+
+\usepackage{fontawesome}  % for extra icons
+\usepackage{enumitem}  % manage spacing for enum
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+% \usepackage{titlesec}                            % used to change the section spacing
+\setlength{\hintscolumnwidth}{2.25cm}              % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Cheng}{Zhang}
+\title{Curriculum vitae}
+\email{czhang03@bu.edu}                               % optional, remove / comment the line if not wanted
+\homepage{cs-people.bu.edu/czhang03/}              % optional, remove / comment the line if not wanted
+% \social[github]{chantisnake}                              % optional, remove / comment the line if not wanted
+% \extrainfo{\faFile{}~\href{https://cdn.jsdelivr.net/gh/chantisnake/CV@master/main.pdf}{Full CV}}
+
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with multiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       --------------------------------------------------------
+
+% Display the CV title
+\makecvtitle{}
+
+% set the space between \cventry
+\setlength{\parskip}{2.5px}
+\linespread{1.3}
+\selectfont
+
+
+\section{Education}
+
+\cventry{2018 --- Now}
+{Doctor of Philosophy, Computer Science} {}
+{Boston University}
+{Boston, MA}
+{\textbf{Research Interests}:
+Algebra, Logic, Program Semantics, Program Verification. }  % description
+
+\cventry{2014 --- 2018}
+{Bachelor of Art, Mathematics} {with department honor, magna cum laude}
+{Wheaton College}
+{Norton, MA}
+{Minor in Computer Science and Economics.
+Major GPA\@: 3.87, Overall GPA\@: 3.83\\
+\textbf{Honor Thesis}: 
+  \href{http://hdl.handle.net/11040/24570}{King in Generalized Tournaments}.\\
+\textbf{Honors and Fellowships}: Dean's Lists, 2014 --- 2018;
+Wheaton Fellows, 2016;
+Faculty-Student Research Awards, 2017
+}
+
+\cventry{2016 --- 2017}
+{Study Aboard, Economics} {}
+{London School Of Economics}
+{London, United Kingdom}
+{}  % description
+
+
+
+\section{Publications}
+
+\cventry{2021}
+{Cheng Zhang, Arthur Azevedo de Amorim, Marco Gaboardi}
+{On Incorrectness Logic and Kleene Algebra With Top and Tests}
+{Submitted to POPL22 for review}
+{}{}
+
+\cventry{2020}
+{Mark Lemay, Cheng Zhang, William Blair}
+{Developing a Dependently Typed Language with Runtime Proof Search (Extended Abstract)}
+{Workshop on Type-Driven Development}
+{}{}
+
+\cventry{2018}
+{Cheng Zhang}
+{King in Generalized Tournaments}
+{Wheaton College Honor Thesis}
+{}{}
+
+\cventry{2018}
+{Cheng Zhang, Weiqi Feng, Emma Steffens, Alvaro de Landaluce, Scott Kleinman, Mark D. LeBlanc}
+{Lexos 2017: Building Reliable Software in Python}
+{Conference for Computing in Small Colleges, UNH-Manchester}
+{}{}
+
+
+\section{Talks}
+
+\cventry{2018}
+{Cheng Zhang, Mark D. LeBlanc}
+{Lexos 2017: Building Reliable Software in Python}
+{Conference for Computing in Small Colleges, UNH-Manchester}
+{}{}
+
+\cventry{2018}
+{Cheng Zhang}
+{Kings in Quasi-transitive Oriented Graph}
+{Wheaton Summit For Woman In STEM}
+{}{}
+
+
+\section{Research Projects}
+
+\cventry{2021 --- Now}
+{Probabilistic Kleene Algebra}
+{}{}{}{}
+
+\cventry{2020 --- Now}
+{Algebraic Formulation Of Incorrectness Logic}
+{}{}{}
+{We investigate the support that KAT provides for reasoning about \emph{incorrectness}, 
+instead, as embodied by Ohearn's recently proposed incorrectness logic. 
+We show that KAT cannot directly express incorrectness logic. 
+To address this issue, we study Kleene algebra with Top and Tests (TopKAT), 
+an extension of KAT with a top element. 
+We show that TopKAT is powerful enough to express a codomain operation, 
+to express incorrectness triples, 
+and to prove all the rules of incorrectness logic sound. 
+This shows that one can reason about the incorrectness of while-like programs 
+by means of the equational theory of TopKAT. }
+
+\cventry{2017 --- 2018}
+{Mathematics Honor Thesis}
+{Wheaton College Mathematics Department}
+{Norton, MA}{}
+{Studies kings in generalization of tournament,
+with a special focus on quasi-transitive oriented graph.
+I have shown that all the quasi-transitive oriented graph
+can be condensed into a tournament 
+via tie component condensation, and tie component condensation
+of quasi-transitive oriented graph is the 
+most efficient condensation to tournament.
+}
+
+\cventry{2015 --- 2018}
+{Software Leader}
+{Lexomics Research Group, Wheaton College}
+{Norton, MA}{}
+{
+  Lead a major factorization of the text analysis software 
+  \href{https://github.com/WheatonCS/Lexos}{Lexos}.
+  In the process, the team adopted modern development workflow and
+  transitioned the code base to a functional-first paradigm for ease of maintenance.
+  I have also proposed a new architecture for side-effect management in Python.
+}
+
+
+
+
+\section{Employment}
+
+\cventry{2019 --- Now}
+{Research Assistant}
+{Boston University}
+{Boston, MA}{}
+{}
+
+\cventry{2019 --- 2021}
+{Teaching Fellow}
+{Boston University}
+{Boston, MA}{}
+{
+  \begin{itemize}[nosep]
+    \item 2020 Fall, CS 230: Principle of Programming Language,
+      with Professor Marco Gaboardi and Lecture Abbas Attarwala
+    \item 2020 Summer, CS 111: Introduction to Computer Science 1,
+      with Lecture John Magee
+    \item 2020 Summer, CS 112: Introduction to Computer Science 2,
+      with Lecturer Christine Papadakis-Kanaris
+    \item 2020 Spring, CS 235: Algebraic Algorithm,  
+      with Professor Leonid Levin
+    \item 2019 Fall, CS 132: Geometric Algorithm, 
+      with Lecture Abbas Attarwala
+    \item 2019 Spring, CS 230: Principle of Programming Language, 
+      with Professor Wayne Snyder
+  \end{itemize}
+}
+
+\cventry{2019}
+{Grader}
+{Boston University CS 511 Formal Method}
+{Boston, MA}{}{}
+
+\cventry{2015 --- 2018}
+{Student Technician}
+{Wheaton College Technology Support}
+{Norton, MA}{}{}
+
+\cventry{2017 --- 2018}
+{Grader}
+{Wheaton College MATH 241 Theory of Probability}
+{Norton, MA}{}{}
+
+
+
+\section{Honors}
+\cvitem{2018 --- Now} {A member of Phi Beta Kappa.}
+\cvitem{2018} {
+  Madeleine F. Clark Wallace Mathematics Prize. \newline
+  Fred Kollett Prize in Mathematics \& Computer Science. \newline
+  Phi Beta Kappa Graduate Scholarship.
+}
+
+
+\end{document}
