@@ -1,3 +1,5 @@
+\newif\iftechnical\technicaltrue
+
 %% start of file `template.tex'.
 %% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
 %
@@ -34,7 +36,7 @@
 \email{czhang03@bu.edu}                               % optional, remove / comment the line if not wanted
 \homepage{cs-people.bu.edu/czhang03/}              % optional, remove / comment the line if not wanted
 \social[github]{chantisnake}                              % optional, remove / comment the line if not wanted
-\extrainfo{\faFile{}~\href{https://cdn.jsdelivr.net/gh/chantisnake/CV@master/main.pdf}{Full CV}}
+\extrainfo{\faFile{}~\href{https://cdn.jsdelivr.net/gh/chantisnake/CV@master/main.pdf}{curriculum vitae}}
 
 
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
@@ -65,14 +67,34 @@
 \section{Education}
 
 \cventry{2018 --- Now}
-{Computer Science, Doctor of Philosophy} {}
+{Computer Science, \iftechnical Doctor of Philosophy \else Ph.D. \fi} {}
 {Boston University}
 {Boston, MA}
-{\textbf{Primary Interest}: Algebra Method in Program Analysis\newline 
-I am also interested in program logic, automated reasoning, and program semantics.}  % description
+{\textbf{Primary Interest}: Algebra Method in Program Analysis\\
+\iftechnical
+I am broadly interested in application of mathematics in computer science,
+especially in programming languages.
+I have worked on Kleene algebra, program logics, semantics, type systems,  and category theories.
+\else 
+I have also worked on static analysis, type systems, and software engineering principles.
+\fi}  % description
+
+
+\cventry{2021}
+{Oregon Programming Language Summer School (OPLSS)}{}
+{University of Oregon}{Eugene, OR}
+{
+\iftechnical
+\else   
+This year, the school focused on foundation of programming and security;
+\fi
+I have attended courses involving verification of probabilistic programs,
+session type for concurrent programming, 
+and categorical semantics of advanced type systems, etc.}
+
 
 \cventry{2014 --- 2018}
-{Mathematics, Bachelor of Art} {with department honor, magna cum laude}
+{Mathematics, \iftechnical Bachelor of Art \else B.A. \fi} {with department honor, magna cum laude}
 {Wheaton College}
 {Norton, MA}
 {\textbf{Honor Thesis}: \href{http://hdl.handle.net/11040/24570}{King in Generalized Tournaments}.\\
@@ -120,7 +142,7 @@ I am also interested in program logic, automated reasoning, and program semantic
 {}{}
 
 
-\section{Talks}
+\section{Research Talks}
 
 \cventry{2018}
 {Cheng Zhang, Mark D. LeBlanc}
@@ -139,28 +161,38 @@ I am also interested in program logic, automated reasoning, and program semantic
 
 \cventry{2021 --- Now}
 {Probabilistic Kleene Algebra}
-{Boston University Department of Computer Science}{Boston, MA}{}
+{Boston University}{Boston, MA}{}
 {Examine the mathematical foundation of probabilistic Kleene Algebra 
-and its potential application in analysis of probabilistic programs.}
+and its potential application in analysis of probabilistic programs.
+This work \iftechnical may \else will \fi 
+give rise to a unified approach to analysis probabilistic programs,
+provide ways to prove program correctness, 
+and identify the probability to encounter bugs in probabilistic programs.}
 
 \cventry{2020 --- Now}
 {Algebraic Formulation Of Incorrectness Logic}
-{Boston University Department of Computer Science}{Boston, MA}{}
-{Investigates the support that KAT provides for reasoning about \emph{incorrectness}, 
-as embodied by Ohearn's recently proposed incorrectness logic. 
-We show that KAT cannot directly express incorrectness logic. 
-To address this issue, we study Kleene algebra with Top and Tests (TopKAT), 
-an extension of KAT with a top element. 
-We show that TopKAT is powerful enough to express a codomain operation, 
-to express incorrectness triples, 
-and to prove all the rules of incorrectness logic sound. 
-This shows that one can reason about the incorrectness of while-like programs 
-by means of the equational theory of TopKAT\@. }
+{Boston University}{Boston, MA}{}
+{Provide a algebraic formulation of Incorrectness Logic in TopKAT.
+Our work leads to simpler proofs for program incorrectness, 
+and demonstrates ways to automatically certify bugs in programs.
+\iftechnical
+We showed that 
+TopKAT is a minimal framework to model incorrectness,
+as it is impossible to encode incorrectness logic in KAT.
+After that, we proved many meta-theoretical property of TopKAT,
+including incompleteness with relational model, 
+completeness of general relational model and language model, 
+complexity of deciding equality, and expressivity of general relational model.
+\else 
+We have also showed that 
+TopKAT is a minimal framework to model incorrectness,
+as it is impossible to encode incorrectness logic in KAT.
+\fi
+}
 
 \cventry{2017 --- 2018}
 {Mathematics Honor Thesis}
-{Wheaton College Mathematics Department}
-{Norton, MA}{}
+{Wheaton College} {Norton, MA}{}
 {Studied kings in generalizations of tournament,
 with a special focus on quasi-transitive oriented graphs.
 I have shown that all the quasi-transitive oriented graphs
@@ -177,60 +209,51 @@ oriented graphs is the most efficient condensation to tournament.
   Led a group of undergraduate engineers through a major factorization of 
   the natrual language processing (NLP) software 
   \href{https://github.com/WheatonCS/Lexos}{Lexos}.
-  In the process, I implemented modern software development workflows and
-  transitioned the code base to a functional-first paradigm for ease of maintenance.
-  I have also proposed a new architecture for side-effect management in Python.
+  In the process, 
+  I have designed a new architecture for side-effect management,
+  transitioned the code base to a scalable functional-first paradigm,
+  implemented industry-standard software development workflows,
+  and provided detailed documentations and guides for the entire system.
 }
 
 
 \section{Honors And Fellowships}
-\cvitem{2018 --- Now} {A member of Phi Beta Kappa.}
-\cvitem{2018}{Boston University Dean's Fellowship}
+\cvitem{2018 --- Now} {Phi Beta Kappa Honor Society Member.}
+\cvitem{2018}{Boston University Dean's Fellowship.}
 \cvitem{2018}{Phi Beta Kappa Graduate Scholarship.}
-\cvitem{2018} { Madeleine F. Clark Wallace Mathematics Prize.}
+\cvitem{2018} {Madeleine F. Clark Wallace Mathematics Prize.}
 \cvitem{2018}{Fred Kollett Prize in Mathematics \& Computer Science.}
 \cvitem{2017}{Weaton College Faculty-Student Research Awards.}
 \cvitem{2016}{Wheaton Fellows.}
-\cvitem{2014 --- 2018}{Wheaton College Dean's Lists.}
 \cvitem{2014 --- 2018}{Wheaton College International Scholarship.}
+\cvitem{2014 --- 2018}{Wheaton College Dean's Lists.}
 
 
-\section{Skills}
+\section{Technical Skills}
 
-\cvline{}{\textbf{Programming Languages}: Haskell, Ocaml, ATS, TypeScript, C\#, Java}
-\cvline{}{\textbf{Scripting Languages}: Python, Powershell, JavaScript}
-\cvline{}{\textbf{Formal Methods}: Coq, Lean, MathComp Z3, EasyCrypt, Agda}
-\cvitem{}{\textbf{Tools}: Git, \LaTeX}
+\iftechnical
+\cvline{}{\textbf{Programming}: Haskell, Ocaml, ATS, Python, TypeScript.}
+\cvline{}{\textbf{Formal Methods}: Coq, Lean, MathComp Z3, EasyCrypt, Agda.}
+\cvline{}{\textbf{Data Processing}: Panda, Scikit-Learn, Numpy, R.}
+\cvitem{}{\textbf{Tools}: Git, \LaTeX, SSH, Jupyter Notebook.}
+\else
+\cvline{}{\textbf{Programming Languages}: Haskell, Ocaml, ATS, TypeScript, C\#, Java, C++.}
+\cvline{}{\textbf{Scripting Languages}: Python, Powershell, JavaScript, Mathematica.}
+\cvline{}{\textbf{Formal Methods}: Coq, Lean, MathComp Z3, EasyCrypt, Agda.}
+\cvline{}{\textbf{Data Processing}: Panda, Scikit-Learn, Numpy, SQL, R, Stata.}
+\cvitem{}{\textbf{Tools}: Git, \LaTeX, SSH, Jupyter Notebook.}
+\fi
 
 
-
-\section{Experiences}
-
-\cventry{2021 --- Now}
-{Organizer}
-{Principle of Programming and Verification Seminar}
-{Boston University}{Boston, MA}
-{I am in charge of inviting and communicating with the speaker;
-organizing all the seminar information on the webpage, mailing list, and calendar;
-and hosting the speaker during the seminar.}
-
-\cventry{2020 --- Now}
-{Organizer}
-{Programming Language Reading Group}
-{Boston University}{Boston, MA}
-{I would assign the reading material every week,
-organize and schedule the weekly meeting for the reading group,
-and host the discussion on the reading material.}
+\section{Professional Experiences}
 
 \cventry{2019 --- Now}
-{Research Assistant}
+{Graduate Researcher}
 {Boston University}
 {Boston, MA}{}
-{My researches focus on algebraic methods in program verifications.
-Currently, I am studying various extensions of Kleene Algebra, 
-and how they can be used to model program semantics and logics.\\
-My researches can provide easier proofs for correctness/incorrectness of programs,
-and can also improve automated program analysis software.
+{Study various extensions of Kleene Algebra, and their use in program analysis
+of imperative/functional programs, probabilistic programs, distributed systems, networks, etc.
+My researches provide easier, even automated, proofs for program analysis.
 }
 
 \cventry{2019 --- 2021}
@@ -238,21 +261,41 @@ and can also improve automated program analysis software.
 {Boston University}
 {Boston, MA}{}
 {
-  I have taught Principle of Programming Language, Introduction to Computer Science,
+  Taught Principle of Programming Language, Introduction to Computer Science,
   Algebra Algorithm, Geometric Algorithm, etc.
 }
+
+
+\cventry{2021 --- Now}
+{Organizer}
+{Principle of Programming and Verification Seminar}
+{Boston University}{Boston, MA}
+{Invite seminar speakers and coordinate time of the talks;
+maintain seminar webpage, mailing list, and calendar;
+distribute details of the seminar to participants every week;
+and host speakers during the seminars.}
+
+\cventry{2020 --- Now}
+{Organizer}
+{Programming Language Reading Group}
+{Boston University}{Boston, MA}
+{Identify and distribute weekly reading materials;
+host and schedule the weekly discussions.}
 
 \cventry{2019}
 {Grader}
 {Boston University CS 511 Formal Method}
 {Boston, MA}{}
-{I wrote up the solutions to all the homework problems, graded the homework,
+{Provided solutions to homework problems, graded the homework,
+organize useful statistics for the professor, 
 and provided hints and answered questions piazza when necessary.}
 
 \cventry{2017 --- 2018}
 {Grader}
 {Wheaton College MATH 241 Theory of Probability}
-{Norton, MA}{}{}
+{Norton, MA}{}
+{Graded homework, gave feedback to students on each individual homework,
+and provide informative statistics to the professor on the homework.}
 
 
 \end{document}
