@@ -70,14 +70,25 @@
 {Computer Science, \iftechnical Doctor of Philosophy\else Ph.D.\fi} {}
 {Boston University}
 {Boston, MA}
-{\textbf{Primary Interest}: Algebra Method in Program Analysis\\
+{\textbf{Primary Interest}: Algebra Method for Program Verification\\
 \iftechnical
 I am broadly interested in application of mathematics in computer science,
 especially in programming languages.
-I have worked on Kleene algebra, program logics, semantics, type systems,  and category theories.
+I have worked on Kleene algebra, program logics, semantics, type systems, and category theories.
 \else 
-I have also worked on static analysis, type systems, and software engineering principles.
+I have worked on static analysis, type systems, and software engineering principles.
 \fi}  % description
+
+\cventry{2022}
+{Oregon Programming Language Summer School (OPLSS)}{}
+{University of Oregon}{Eugene, OR}
+{
+\iftechnical
+\else   
+This year, the school focused on Types, Semantics, and Program Reasoning;
+\fi
+I have attended courses involving proof theory,
+type theory, algebraic effect system, program verification in Coq etc.}
 
 
 \cventry{2021}
@@ -110,11 +121,6 @@ and categorical semantics of advanced type systems, etc.}
 
 
 \section{Publications And Preprints}
-
-\cventry{2022}
-{Mark Lemay, Qiancheng Fu, Cheng Zhang, William Blair, Hongwei Xi}
-{A Dependently Typed Language with Dynamic Equality}
-{Submitted to International Conference On Functional Programming (ICFP)}{}{}
 
 \cventry{2022}
 {Cheng Zhang, Arthur Azevedo de Amorim, Marco Gaboardi}
@@ -178,14 +184,11 @@ and categorical semantics of advanced type systems, etc.}
 \section{Research Projects}
 
 \cventry{2021 --- Now}
-{Probabilistic Kleene Algebra}
+{Probabilistic Incorrectness Logic}
 {Boston University}{Boston, MA}{}
-{Examine the mathematical foundation of probabilistic Kleene Algebra 
-and its potential application in analysis of probabilistic programs.
+{Examine the mathematical foundation of probabilistic Incorrectness logic.
 This work \iftechnical may \else will \fi 
-give rise to a unified approach to analysis probabilistic programs,
-provide ways to prove program correctness, 
-and identify the probability to encounter bugs in probabilistic programs.}
+give rise to a method to identify the probability of encountering bugs in programs.}
 
 \cventry{2020 --- 2022}
 {Algebraic Formulation Of Incorrectness Logic}
@@ -251,8 +254,8 @@ oriented graphs is the most efficient condensation to tournament.
 \section{Technical Skills}
 
 \iftechnical
-\cvline{}{\textbf{Programming}: Haskell, Ocaml, ATS, Python, TypeScript.}
-\cvline{}{\textbf{Formal Methods}: Coq, Lean, MathComp Z3, EasyCrypt, Agda.}
+\cvline{}{\textbf{Programming}: Haskell, ATS, Python, TypeScript.}
+\cvline{}{\textbf{Formal Methods}: Coq, MathComp, Z3.}
 \cvline{}{\textbf{Data Processing}: Panda, Scikit-Learn, Numpy, R.}
 \cvitem{}{\textbf{Tools}: Git, \LaTeX, SSH, Jupyter Notebook.}
 \else
