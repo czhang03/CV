@@ -213,47 +213,51 @@ I have worked on Kleene algebra, automata thoery, semantics, type systems, and t
 {Wheaton Summit For Woman In STEM}
 {}{}
 
-\newpage
 \section{Research Projects}
+
+\cventry{2024}
+{A Symbolic Decision Procedure For Guarded Kleene Algebra With Tests}
+{}{}{}
+{Guarded Kleene Algebra With Tests is an efficient framework for program verifications. In this work, We marry GKAT with symbolic automaton, further improving its efficiency.
+Unlike previous works with regard to KAT, our algorithm was able to offload the solving of complex boolean logic to a trusted solver like z3.
+This work also gives the exact complexity bound of GKAT.}
+
+\cventry{2024}
+{Guarded Kleene Algebra With Tests And Control Flow Verification}
+{}{}{}
+{Correctness of compilation and decompilation remains a challenging step in verifying software correctness, one of the most challenging steps remains to be control flow restructuring.
+Many works in compiler and decompiler do not verify the correctness of their algorithm, stumped by the complexity of the verification process.
+In this work we designed an algorithm to formally verify control-flow restructuring. This algorithm is not only sound and complete with regard to trace equivalences, but also able to handle a wide range of control-flow structures like goto, break, return, and indicator variables. 
+Furthermore, we provide an experimental implementation, allowing developers to interface with our algorithm, and we have verified that this algorithm was able to verify program with millions of command in seconds, running on a laptop.}
 
 \cventry{2022 --- 2024}
 {Kleene Algebra With Commutative Hypothesis}
-{Boston University}{Boston, MA}{}
+{}{}{}
 {Researchers has long known the importance of commutative hypothesis in Kleene Algebra.
-With recent work, it is shown that commutative hypothesis is also crucial
-in the foundation of relational verifications. 
-Unfortunately there are several difficulties to reason about Kleene Algebra with 
-commutative hypothesis, 
-one of which is the fact that the equalities in the language model is undecidable.
-In this work, we took on this long standing open problem,
-hope to uncover more properties of Kleene Algebra with Commutative Hypothesis.}
+However, with recent work, commutative hypothesis was put on the center stage as the foundation of relational verifications. 
+Unfortunately, the theory of KA with commutativity hypothesis is not as well-developed as its applications. 
+Specifically, the decidability of Kleene algebra with commutativity hypothesis has remained open for almost three decades.
+In this work, we took on this long-standing open problem, and proven that the Kleene Algebra with commutativity hypothesis is undecidable.
+In fact, we were able to obtain our undecidability result with only the left unfolding rule, and omitted induction rules. This means a large class of theories sitting between idempotent semiring with left unfolding, and the regular languages are all undecidable with commutativity hypothesis.}
 
 \cventry{2021 --- 2022}
 {Probabilistic Incorrectness Logic and Kleene Algebra}
-{Boston University}{Boston, MA}{}
+{}{}{}
 {Examine the mathematical foundation of probabilistic Incorrectness logic.
-This work \iftechnical may \else will \fi 
-give rise to a method to identify the probabilities of encountering bugs in programs.}
+This work may give rise to a method reason about correctness and incorrectness in probabilistic programs.}
 
 \cventry{2020 --- 2022}
 {Algebraic Formulation Of Incorrectness Logic}
-{Boston University}{Boston, MA}{}
-{Provide a algebraic formulation of Incorrectness Logic in TopKAT.
+{}{}{}
+{Provide an algebraic formulation of Incorrectness Logic in TopKAT.
 Our work leads to simpler proofs for program incorrectness, 
 and demonstrates ways to automatically certify bugs in programs.
-\iftechnical
-We showed that 
-TopKAT is a minimal framework to model incorrectness,
+We showed that TopKAT is a minimal framework to model incorrectness,
 as it is impossible to encode incorrectness logic in KAT.
 After that, we proved many meta-theoretical property of TopKAT,
 including incompleteness with relational model, 
 completeness of general relational model and language model, 
 complexity of deciding equality, and expressivity of general relational model.
-\else 
-We have also showed that 
-TopKAT is a minimal framework to model incorrectness,
-as it is impossible to encode incorrectness logic in KAT.
-\fi
 }
 
 \cventry{2017 --- 2018}
